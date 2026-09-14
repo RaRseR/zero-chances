@@ -1,0 +1,93 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/Settings/Pages/Video/VideoPage.cs" id="1_page"]
+
+[node name="VideoPage" type="VBoxContainer" unique_id=1740005000]
+mouse_filter = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_page")
+
+[node name="Resolution" type="MarginContainer" parent="." unique_id=1740005010]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="Row" type="HBoxContainer" parent="Resolution" unique_id=1740005011]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="NameLabel" type="Label" parent="Resolution/Row" unique_id=1740005012]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResolutionOption" type="OptionButton" parent="Resolution/Row" unique_id=1740005013]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="ResolutionHint" type="Label" parent="Resolution/Row" unique_id=1740005014]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = "WINDOWED"
+
+[node name="Line1" type="ColorRect" parent="." unique_id=1740005015]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.18)
+
+[node name="ScreenMode" type="MarginContainer" parent="." unique_id=1740005016]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="Row" type="HBoxContainer" parent="ScreenMode" unique_id=1740005017]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="NameLabel" type="Label" parent="ScreenMode/Row" unique_id=1740005018]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+text = "Screen Mode"
+
+[node name="Modes" type="HBoxContainer" parent="ScreenMode/Row" unique_id=1740005019]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = -3
+
+[node name="WINDOW" type="Button" parent="ScreenMode/Row/Modes" unique_id=1740005020]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+text = "WINDOW"
+
+[node name="BORDERLESS" type="Button" parent="ScreenMode/Row/Modes" unique_id=1740005021]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+text = "BORDERLESS"
+
+[node name="FULL" type="Button" parent="ScreenMode/Row/Modes" unique_id=1740005022]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+text = "FULL"
+
+[node name="ScreenModeHint" type="Label" parent="ScreenMode/Row" unique_id=1740005023]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = ""

@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/Menu/Pages/Lobby/EmptySlot/EmptySlot.cs" id="1_slot"]
+
+[node name="EmptySlot" type="PanelContainer" unique_id=1740006001]
+size_flags_horizontal = 3
+size_flags_vertical = 0
+mouse_filter = 2
+theme_type_variation = &"Slot"
+script = ExtResource("1_slot")
+LineColor = Color(0.13725491, 0.12941177, 0.12156863, 0.3)
+LineWidth = 3.0
+DashLength = 12.0
+GapLength = 9.0
+
+[node name="NumberLabel" type="Label" parent="." unique_id=1740006003]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = "SLOT"
+vertical_alignment = 1

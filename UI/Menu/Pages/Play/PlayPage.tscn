@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b7ip3nb08rcwm"]
+
+[ext_resource type="Theme" uid="uid://cd7kxq8mf4v6b" path="res://UI/Theme/BaseTheme.tres" id="1_8n6tl"]
+[ext_resource type="Script" uid="uid://dl5330fx51b3d" path="res://UI/Menu/Pages/Play/PlayPage.cs" id="1_page"]
+[ext_resource type="PackedScene" uid="uid://2n28c4kxqd21" path="res://UI/Menu/Pages/Play/ChoiceCard/ChoiceCard.tscn" id="3_card"]
+
+[node name="PlayPage" type="Control" unique_id=1740003000]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8n6tl")
+script = ExtResource("1_page")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1740003001]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 72
+theme_override_constants/margin_right = 96
+theme_override_constants/margin_bottom = 64
+
+[node name="Column" type="VBoxContainer" parent="Margin" unique_id=1740003002]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="TitleGap" type="Control" parent="Margin/Column" unique_id=1740003004]
+custom_minimum_size = Vector2(0, 88)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Cards" type="HBoxContainer" parent="Margin/Column" unique_id=1740003005]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="CreateCard" parent="Margin/Column/Cards" unique_id=1740003006 instance=ExtResource("3_card")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+Caption = "Create"
+
+[node name="JoinCard" parent="Margin/Column/Cards" unique_id=1740003007 instance=ExtResource("3_card")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+Caption = "Join"
+
+[node name="Filler" type="Control" parent="Margin/Column" unique_id=1740003008]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="BackButton" type="Button" parent="Margin/Column" unique_id=1740003009]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Back"

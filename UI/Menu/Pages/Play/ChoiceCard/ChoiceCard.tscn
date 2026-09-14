@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://2n28c4kxqd21"]
+
+[ext_resource type="Script" uid="uid://chy6p2drqoc5v" path="res://UI/Menu/Pages/Play/ChoiceCard/ChoiceCard.cs" id="1_card"]
+[ext_resource type="Texture2D" uid="uid://cn1datefkj32e" path="res://Assets/Dev/2.jpg" id="9_art"]
+
+[node name="ChoiceCard" type="Button" unique_id=1740002000]
+custom_minimum_size = Vector2(600, 590)
+script = ExtResource("1_card")
+Art = ExtResource("9_art")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1740002001]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="Column" type="VBoxContainer" parent="Margin" unique_id=1740002002]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="Caption" type="PanelContainer" parent="Margin/Column" unique_id=1740002003]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CaptionMargin" type="MarginContainer" parent="Margin/Column/Caption" unique_id=1740002004]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 10
+
+[node name="CaptionLabel" type="Label" parent="Margin/Column/Caption/CaptionMargin" unique_id=1740002005]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Card"
+
+[node name="ArtRect" type="TextureRect" parent="Margin/Column" unique_id=1740002006]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(0, 330)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("9_art")
+expand_mode = 1
+stretch_mode = 6

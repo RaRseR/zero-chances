@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://cwk7681to1qyo"]
+
+[ext_resource type="Script" uid="uid://hmo7rie5qxc0" path="res://UI/Menu/Pages/Start/StartPage.cs" id="1_page"]
+[ext_resource type="FontFile" uid="uid://btnuudww42g0m" path="res://Assets/Fonts/Jacquard24-Regular.ttf" id="2_6200p"]
+[ext_resource type="Theme" uid="uid://cd7kxq8mf4v6b" path="res://UI/Theme/BaseTheme.tres" id="3_icqtn"]
+[ext_resource type="PackedScene" uid="uid://c31ysoq8xdpou" path="res://UI/Player/Banner/Banner.tscn" id="4_banner"]
+
+[node name="StartPage" type="Control" unique_id=1740001000]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_icqtn")
+script = ExtResource("1_page")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1740001001]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 112
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 112
+theme_override_constants/margin_bottom = 64
+
+[node name="Column" type="VBoxContainer" parent="Margin" unique_id=1740001002]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="TitleBlock" type="VBoxContainer" parent="Margin/Column" unique_id=1740001003]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="ZeroLabel" type="Label" parent="Margin/Column/TitleBlock" unique_id=1740001004]
+layout_mode = 2
+theme = ExtResource("3_icqtn")
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.6745098, 0.19607843, 0.19607843, 1)
+text = "ZERO"
+
+[node name="ChancesLabel" type="Label" parent="Margin/Column/TitleBlock" unique_id=1740001005]
+layout_mode = 2
+theme = ExtResource("3_icqtn")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 104
+text = "CHANCES"
+
+[node name="Menu" type="VBoxContainer" parent="Margin/Column" unique_id=1740001007]
+layout_mode = 2
+size_flags_vertical = 6
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="PlaySlot" type="Control" parent="Margin/Column/Menu" unique_id=1740001100]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PlayButton" type="Button" parent="Margin/Column/Menu/PlaySlot" unique_id=1740001008]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.0087266
+pivot_offset = Vector2(0, 40)
+theme = ExtResource("3_icqtn")
+theme_type_variation = &"PrimaryButton"
+text = "Play"
+alignment = 0
+
+[node name="SettingsSlot" type="Control" parent="Margin/Column/Menu" unique_id=1740001101]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SettingsButton" type="Button" parent="Margin/Column/Menu/SettingsSlot" unique_id=1740001009]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.005236
+pivot_offset = Vector2(0, 34)
+text = "Settings"
+alignment = 0
+
+[node name="GeneratorSlot" type="Control" parent="Margin/Column/Menu" unique_id=1740001103]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="GeneratorButton" type="Button" parent="Margin/Column/Menu/GeneratorSlot" unique_id=1740001011]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.005236
+pivot_offset = Vector2(0, 34)
+text = "Generator"
+alignment = 0
+
+[node name="ExitSlot" type="Control" parent="Margin/Column/Menu" unique_id=1740001102]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ExitButton" type="Button" parent="Margin/Column/Menu/ExitSlot" unique_id=1740001010]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0087266
+pivot_offset = Vector2(0, 34)
+text = "Exit"
+alignment = 0
+
+[node name="Footer" type="VBoxContainer" parent="Margin/Column" unique_id=1740001014]
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Banner" parent="Margin/Column/Footer" unique_id=1740001015 instance=ExtResource("4_banner")]
+unique_name_in_owner = true
+layout_mode = 2
+ShowActions = false
+
+[node name="VersionLabel" type="Label" parent="Margin/Column/Footer" unique_id=1740001018]
+unique_name_in_owner = true
+layout_mode = 2
+text = "v0.5"

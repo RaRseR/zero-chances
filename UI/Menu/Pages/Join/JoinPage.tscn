@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://cph7wrt2c33ml"]
+
+[ext_resource type="Script" uid="uid://ckeihoqdrhwm1" path="res://UI/Menu/Pages/Join/JoinPage.cs" id="1_page"]
+[ext_resource type="Theme" uid="uid://cd7kxq8mf4v6b" path="res://UI/Theme/BaseTheme.tres" id="2_theme"]
+
+[node name="JoinPage" type="Control" unique_id=1740009001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_page")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1740009002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 72
+theme_override_constants/margin_top = 56
+theme_override_constants/margin_right = 72
+theme_override_constants/margin_bottom = 56
+
+[node name="Column" type="VBoxContainer" parent="Margin" unique_id=1740009003]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 22
+
+[node name="Header" type="HBoxContainer" parent="Margin/Column" unique_id=1740009004]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 26
+
+[node name="TitleLabel" type="Label" parent="Margin/Column/Header" unique_id=1740009005]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 48
+text = "Join Match"
+
+[node name="Filters" type="HBoxContainer" parent="Margin/Column" unique_id=1740009008]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="NameEdit" type="LineEdit" parent="Margin/Column/Filters" unique_id=1740009009]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Search by name"
+caret_blink = true
+
+[node name="TotalBox" type="HBoxContainer" parent="Margin/Column/Filters" unique_id=1740009010]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="TotalCaps" type="Label" parent="Margin/Column/Filters/TotalBox" unique_id=1740009011]
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = "SLOTS"
+
+[node name="TotalSpin" type="SpinBox" parent="Margin/Column/Filters/TotalBox" unique_id=1740009012]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 32.0
+
+[node name="FreeBox" type="HBoxContainer" parent="Margin/Column/Filters" unique_id=1740009013]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="FreeCaps" type="Label" parent="Margin/Column/Filters/FreeBox" unique_id=1740009014]
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = "FREE SLOTS"
+
+[node name="FreeSpin" type="SpinBox" parent="Margin/Column/Filters/FreeBox" unique_id=1740009015]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 32.0
+value = 1.0
+
+[node name="PingBox" type="HBoxContainer" parent="Margin/Column/Filters" unique_id=1740009016]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="PingCaps" type="Label" parent="Margin/Column/Filters/PingBox" unique_id=1740009017]
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = "PING <"
+
+[node name="PingSpin" type="SpinBox" parent="Margin/Column/Filters/PingBox" unique_id=1740009018]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 500.0
+step = 10.0
+
+[node name="RefreshButton" type="Button" parent="Margin/Column/Filters" unique_id=1740009019]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Refresh"
+
+[node name="Table" type="VBoxContainer" parent="Margin/Column" unique_id=1740009020]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="HeaderBar" type="PanelContainer" parent="Margin/Column/Table" unique_id=1740009021]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"Header"
+
+[node name="HeaderRow" type="HBoxContainer" parent="Margin/Column/Table/HeaderBar" unique_id=1740009022]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="IndexCaps" type="Label" parent="Margin/Column/Table/HeaderBar/HeaderRow" unique_id=1740009023]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_type_variation = &"CapsLight"
+text = "#"
+
+[node name="NameCaps" type="Label" parent="Margin/Column/Table/HeaderBar/HeaderRow" unique_id=1740009024]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CapsLight"
+text = "NAME"
+
+[node name="PlayersCaps" type="Label" parent="Margin/Column/Table/HeaderBar/HeaderRow" unique_id=1740009025]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+theme_type_variation = &"CapsLight"
+text = "PLAYERS"
+
+[node name="PingCaps" type="Label" parent="Margin/Column/Table/HeaderBar/HeaderRow" unique_id=1740009026]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_type_variation = &"CapsLight"
+text = "PING"
+
+[node name="ActionCaps" type="Label" parent="Margin/Column/Table/HeaderBar/HeaderRow" unique_id=1740009027]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"CapsLight"
+
+[node name="RowScroll" type="ScrollContainer" parent="Margin/Column/Table" unique_id=1740009028]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="RowHost" type="VBoxContainer" parent="Margin/Column/Table/RowScroll" unique_id=1740009029]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="Footer" type="HBoxContainer" parent="Margin/Column" unique_id=1740009030]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="BackButton" type="Button" parent="Margin/Column/Footer" unique_id=1740009031]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Back"
+
+[node name="Filler" type="Control" parent="Margin/Column/Footer" unique_id=1740009032]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="PrevButton" type="Button" parent="Margin/Column/Footer" unique_id=1740009033]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"Segment"
+text = "<"
+
+[node name="PageLabel" type="Label" parent="Margin/Column/Footer" unique_id=1740009034]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"MonoStrong"
+theme_override_font_sizes/font_size = 24
+text = "PAGE 1 / 1"
+horizontal_alignment = 1
+
+[node name="NextButton" type="Button" parent="Margin/Column/Footer" unique_id=1740009035]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"Segment"
+text = ">"

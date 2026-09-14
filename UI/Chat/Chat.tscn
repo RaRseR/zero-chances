@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://6d1pldodoohl"]
+
+[ext_resource type="Theme" uid="uid://cd7kxq8mf4v6b" path="res://UI/Theme/BaseTheme.tres" id="1_kch7i"]
+
+[node name="Chat" type="PanelContainer" unique_id=1343175189]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_kch7i")
+theme_type_variation = &"Box"
+
+[node name="ChatColumn" type="VBoxContainer" parent="." unique_id=1107604569]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="ChatBody" type="MarginContainer" parent="ChatColumn" unique_id=348926564]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="ChatLines" type="VBoxContainer" parent="ChatColumn/ChatBody" unique_id=1942853451]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="ChatDivider" type="ColorRect" parent="ChatColumn" unique_id=490478585]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.25)
+
+[node name="ChatInput" type="MarginContainer" parent="ChatColumn" unique_id=805969444]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="ChatPlaceholder" type="Label" parent="ChatColumn/ChatInput" unique_id=781146141]
+layout_mode = 2
+theme_type_variation = &"Muted"
+text = "Message..."

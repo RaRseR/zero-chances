@@ -1,0 +1,70 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/Menu/Pages/Join/LobbyRow/LobbyRow.cs" id="1_row"]
+
+[node name="LobbyRow" type="VBoxContainer" unique_id=1740008001]
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_row")
+
+[node name="Body" type="MarginContainer" parent="." unique_id=1740008002]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 6
+
+[node name="Row" type="HBoxContainer" parent="Body" unique_id=1740008003]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="IndexLabel" type="Label" parent="Body/Row" unique_id=1740008004]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"Mono"
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="NameLabel" type="Label" parent="Body/Row" unique_id=1740008005]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Lobby"
+text_overrun_behavior = 3
+
+[node name="PlayersLabel" type="Label" parent="Body/Row" unique_id=1740008006]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"MonoStrong"
+text = "0 / 0"
+
+[node name="PingLabel" type="Label" parent="Body/Row" unique_id=1740008007]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"Mono"
+theme_override_font_sizes/font_size = 20
+text = "-"
+
+[node name="JoinButton" type="Button" parent="Body/Row" unique_id=1740008008]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"Segment"
+focus_mode = 0
+text = "Join"
+
+[node name="Line" type="ColorRect" parent="." unique_id=1740008009]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.14)

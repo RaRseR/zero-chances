@@ -1,0 +1,37 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/Settings/Pages/Gameplay/GameplayPage.cs" id="1_page"]
+
+[node name="GameplayPage" type="VBoxContainer" unique_id=1740005300]
+mouse_filter = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_page")
+
+[node name="Language" type="MarginContainer" parent="." unique_id=1740005310]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="Row" type="HBoxContainer" parent="Language" unique_id=1740005311]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="NameLabel" type="Label" parent="Language/Row" unique_id=1740005312]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+text = "Language"
+
+[node name="LocaleOption" type="OptionButton" parent="Language/Row" unique_id=1740005313]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="LanguageHint" type="Label" parent="Language/Row" unique_id=1740005314]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = ""

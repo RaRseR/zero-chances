@@ -1,0 +1,66 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/Menu/Pages/Lobby/WorldCard/WorldCard.cs" id="1_card"]
+[ext_resource type="Texture2D" path="res://Assets/Dev/2.jpg" id="9_art"]
+
+[node name="WorldCard" type="Button" unique_id=1740005001]
+custom_minimum_size = Vector2(158, 222)
+toggle_mode = true
+focus_mode = 0
+script = ExtResource("1_card")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1740005002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="Column" type="VBoxContainer" parent="Margin" unique_id=1740005003]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 5
+
+[node name="Caption" type="PanelContainer" parent="Margin/Column" unique_id=1740005004]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"Header"
+
+[node name="TitleLabel" type="Label" parent="Margin/Column/Caption" unique_id=1740005005]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"CapsLight"
+text = "Card"
+autowrap_mode = 3
+
+[node name="Art" type="TextureRect" parent="Margin/Column" unique_id=1740005006]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("9_art")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CategoryLabel" type="Label" parent="Margin/Column" unique_id=1740005007]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Mono"
+theme_override_font_sizes/font_size = 12
+text = "CATEGORY"
+
+[node name="StatLabel" type="Label" parent="Margin/Column" unique_id=1740005008]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"Mono"
+theme_override_font_sizes/font_size = 13
+vertical_alignment = 2
+autowrap_mode = 3

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://csftcneqp6pnk"]
+
+[ext_resource type="Script" uid="uid://sxnt2hl1lpli" path="res://UI/Menu/Background/Background.cs" id="1_02idg"]
+
+[sub_resource type="ProceduralSkyMaterial" id="Sky_1"]
+sky_top_color = Color(0.24, 0.38, 0.56, 1)
+sky_horizon_color = Color(0.55, 0.6, 0.62, 1)
+ground_bottom_color = Color(0.13, 0.14, 0.17, 1)
+ground_horizon_color = Color(0.55, 0.6, 0.62, 1)
+
+[sub_resource type="Sky" id="SkyRes_1"]
+sky_material = SubResource("Sky_1")
+
+[sub_resource type="Environment" id="Env_1"]
+background_mode = 2
+sky = SubResource("SkyRes_1")
+ambient_light_source = 3
+ambient_light_energy = 0.6
+
+[node name="Background" type="Node3D" unique_id=1145979098]
+script = ExtResource("1_02idg")
+
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=903863835]
+environment = SubResource("Env_1")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=851092463]
+transform = Transform3D(0.7, -0.5, 0.51, 0, 0.71, 0.7, -0.71, -0.49, 0.5, 0, 20000, 0)
+light_energy = 1.1
+shadow_enabled = true
+
+[node name="Focus" type="Marker3D" parent="." unique_id=899453705]

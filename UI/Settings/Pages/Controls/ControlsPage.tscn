@@ -1,0 +1,213 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/Settings/Pages/Controls/ControlsPage.cs" id="1_page"]
+
+[node name="ControlsPage" type="VBoxContainer" unique_id=1740005200]
+mouse_filter = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_page")
+
+[node name="Forward" type="MarginContainer" parent="." unique_id=1740005210]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="Row" type="HBoxContainer" parent="Forward" unique_id=1740005211]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="NameLabel" type="Label" parent="Forward/Row" unique_id=1740005212]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+text = "Move Forward"
+
+[node name="ForwardKey" type="Button" parent="Forward/Row" unique_id=1740005213]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+
+[node name="ForwardHint" type="Label" parent="Forward/Row" unique_id=1740005214]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = ""
+
+[node name="Line1" type="ColorRect" parent="." unique_id=1740005215]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.18)
+
+[node name="Left" type="MarginContainer" parent="." unique_id=1740005216]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="Row" type="HBoxContainer" parent="Left" unique_id=1740005217]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="NameLabel" type="Label" parent="Left/Row" unique_id=1740005218]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+text = "Move Left"
+
+[node name="LeftKey" type="Button" parent="Left/Row" unique_id=1740005219]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+
+[node name="LeftHint" type="Label" parent="Left/Row" unique_id=1740005220]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = ""
+
+[node name="Line2" type="ColorRect" parent="." unique_id=1740005221]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.18)
+
+[node name="Backward" type="MarginContainer" parent="." unique_id=1740005222]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="Row" type="HBoxContainer" parent="Backward" unique_id=1740005223]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="NameLabel" type="Label" parent="Backward/Row" unique_id=1740005224]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+text = "Move Back"
+
+[node name="BackwardKey" type="Button" parent="Backward/Row" unique_id=1740005225]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+
+[node name="BackwardHint" type="Label" parent="Backward/Row" unique_id=1740005226]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = ""
+
+[node name="Line3" type="ColorRect" parent="." unique_id=1740005227]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.18)
+
+[node name="Right" type="MarginContainer" parent="." unique_id=1740005228]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="Row" type="HBoxContainer" parent="Right" unique_id=1740005229]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="NameLabel" type="Label" parent="Right/Row" unique_id=1740005230]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+text = "Move Right"
+
+[node name="RightKey" type="Button" parent="Right/Row" unique_id=1740005231]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+
+[node name="RightHint" type="Label" parent="Right/Row" unique_id=1740005232]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = ""
+
+[node name="Line4" type="ColorRect" parent="." unique_id=1740005233]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.18)
+
+[node name="RotateLeft" type="MarginContainer" parent="." unique_id=1740005234]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="Row" type="HBoxContainer" parent="RotateLeft" unique_id=1740005235]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="NameLabel" type="Label" parent="RotateLeft/Row" unique_id=1740005236]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+text = "Rotate Camera Left"
+
+[node name="RotateLeftKey" type="Button" parent="RotateLeft/Row" unique_id=1740005237]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+
+[node name="RotateLeftHint" type="Label" parent="RotateLeft/Row" unique_id=1740005238]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = ""
+
+[node name="Line5" type="ColorRect" parent="." unique_id=1740005239]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.18)
+
+[node name="RotateRight" type="MarginContainer" parent="." unique_id=1740005240]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="Row" type="HBoxContainer" parent="RotateRight" unique_id=1740005241]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="NameLabel" type="Label" parent="RotateRight/Row" unique_id=1740005242]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+text = "Rotate Camera Right"
+
+[node name="RotateRightKey" type="Button" parent="RotateRight/Row" unique_id=1740005243]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+
+[node name="RotateRightHint" type="Label" parent="RotateRight/Row" unique_id=1740005244]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Mono"
+text = ""

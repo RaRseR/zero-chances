@@ -1,0 +1,4 @@
+[gd_resource type="VisualShader" format=3 uid="uid://4qsqqfae02hp"]
+
+[resource]
+nodes/vertex/0/position = Vector2(960, 100)

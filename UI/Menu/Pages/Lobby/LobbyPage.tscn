@@ -1,0 +1,380 @@
+[gd_scene format=3 uid="uid://c1414rqoonw6p"]
+
+[ext_resource type="Script" uid="uid://bcjq6erv2yh21" path="res://UI/Menu/Pages/Lobby/LobbyPage.cs" id="1_page"]
+[ext_resource type="Theme" uid="uid://cd7kxq8mf4v6b" path="res://UI/Theme/BaseTheme.tres" id="2_theme"]
+[ext_resource type="PackedScene" uid="uid://6d1pldodoohl" path="res://UI/Chat/Chat.tscn" id="3_oxgv8"]
+[ext_resource type="Script" path="res://UI/DashedBorder/DashedBorder.cs" id="4_dashed"]
+
+[node name="LobbyPage" type="Control" unique_id=1740007001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_page")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1740007002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 40
+
+[node name="Column" type="VBoxContainer" parent="Margin" unique_id=1740007003]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="Margin/Column" unique_id=1740007005]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "Lobby"
+
+[node name="Body" type="HBoxContainer" parent="Margin/Column" unique_id=1740007008]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="Left" type="VBoxContainer" parent="Margin/Column/Body" unique_id=1740007009]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="Fields" type="HBoxContainer" parent="Margin/Column/Body/Left" unique_id=1740007010]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="NameField" type="VBoxContainer" parent="Margin/Column/Body/Left/Fields" unique_id=1740007011]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="NameCaps" type="Label" parent="Margin/Column/Body/Left/Fields/NameField" unique_id=1740007012]
+layout_mode = 2
+theme_type_variation = &"Caps"
+text = "LOBBY NAME"
+
+[node name="NameEdit" type="LineEdit" parent="Margin/Column/Body/Left/Fields/NameField" unique_id=1740007013]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+caret_blink = true
+
+[node name="SeedField" type="VBoxContainer" parent="Margin/Column/Body/Left/Fields" unique_id=1740007096]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="SeedCaps" type="Label" parent="Margin/Column/Body/Left/Fields/SeedField" unique_id=1740007097]
+layout_mode = 2
+theme_type_variation = &"Caps"
+text = "SEED"
+
+[node name="SeedRow" type="HBoxContainer" parent="Margin/Column/Body/Left/Fields/SeedField" unique_id=1740007099]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = -3
+
+[node name="SeedEdit" type="LineEdit" parent="Margin/Column/Body/Left/Fields/SeedField/SeedRow" unique_id=1740007098]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "random"
+max_length = 24
+caret_blink = true
+
+[node name="RollButton" type="Button" parent="Margin/Column/Body/Left/Fields/SeedField/SeedRow" unique_id=1740007100]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+text = "NEW"
+
+[node name="FieldsGap" type="Control" parent="Margin/Column/Body/Left/Fields" unique_id=1740007095]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="AccessField" type="VBoxContainer" parent="Margin/Column/Body/Left/Fields" unique_id=1740007080]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="AccessCaps" type="Label" parent="Margin/Column/Body/Left/Fields/AccessField" unique_id=1740007081]
+layout_mode = 2
+theme_type_variation = &"Caps"
+text = "ACCESS"
+
+[node name="AccessBar" type="HBoxContainer" parent="Margin/Column/Body/Left/Fields/AccessField" unique_id=1740007082]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = -3
+
+[node name="OpenButton" type="Button" parent="Margin/Column/Body/Left/Fields/AccessField/AccessBar" unique_id=1740007083]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"SegmentActive"
+toggle_mode = true
+button_pressed = true
+text = "OPEN"
+
+[node name="FriendsButton" type="Button" parent="Margin/Column/Body/Left/Fields/AccessField/AccessBar" unique_id=1740007084]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+toggle_mode = true
+text = "FRIENDS"
+
+[node name="PassButton" type="Button" parent="Margin/Column/Body/Left/Fields/AccessField/AccessBar" unique_id=1740007085]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"Segment"
+toggle_mode = true
+text = "PASSWORD"
+
+[node name="PasswordField" type="VBoxContainer" parent="Margin/Column/Body/Left/Fields" unique_id=1740007014]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="PasswordCaps" type="Label" parent="Margin/Column/Body/Left/Fields/PasswordField" unique_id=1740007015]
+layout_mode = 2
+theme_type_variation = &"Caps"
+text = "PASSWORD"
+
+[node name="PasswordEdit" type="LineEdit" parent="Margin/Column/Body/Left/Fields/PasswordField" unique_id=1740007016]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+secret = true
+caret_blink = true
+
+[node name="FactionField" type="VBoxContainer" parent="Margin/Column/Body/Left/Fields" unique_id=1740007090]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="FactionCaps" type="Label" parent="Margin/Column/Body/Left/Fields/FactionField" unique_id=1740007091]
+layout_mode = 2
+theme_type_variation = &"Caps"
+text = "FACTION"
+
+[node name="FactionButton" type="Button" parent="Margin/Column/Body/Left/Fields/FactionField" unique_id=1740007092]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(62, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+focus_mode = 0
+theme_type_variation = &"Swatch"
+
+[node name="PlayersHeader" type="Label" parent="Margin/Column/Body/Left" unique_id=1740007018]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HeaderSmall"
+text = "Players"
+
+[node name="Divider" type="ColorRect" parent="Margin/Column/Body/Left" unique_id=1740007020]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 1)
+
+[node name="PlayerScroll" type="ScrollContainer" parent="Margin/Column/Body/Left" unique_id=1740007021]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="PlayerHost" type="GridContainer" parent="Margin/Column/Body/Left/PlayerScroll" unique_id=1740007022]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 4
+
+[node name="BotButtons" type="HBoxContainer" parent="Margin/Column/Body/Left" unique_id=1740007023]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="AddBotButton" type="Button" parent="Margin/Column/Body/Left/BotButtons" unique_id=1740007024]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Add Bot"
+
+[node name="FillBotsButton" type="Button" parent="Margin/Column/Body/Left/BotButtons" unique_id=1740007025]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Fill With Bots"
+
+[node name="RemoveBotsButton" type="Button" parent="Margin/Column/Body/Left/BotButtons" unique_id=1740007070]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Remove Bots"
+
+[node name="Chat" parent="Margin/Column/Body/Left" unique_id=1343175189 instance=ExtResource("3_oxgv8")]
+layout_mode = 2
+
+[node name="Right" type="VBoxContainer" parent="Margin/Column/Body" unique_id=1740007026]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="WorldHeaderRow" type="HBoxContainer" parent="Margin/Column/Body/Right" unique_id=1740007027]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="WorldHeader" type="Label" parent="Margin/Column/Body/Right/WorldHeaderRow" unique_id=1740007028]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"HeaderSmall"
+text = "World Composition"
+
+[node name="WorldDivider" type="ColorRect" parent="Margin/Column/Body/Right" unique_id=1740007033]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.4)
+
+[node name="Composition" type="HBoxContainer" parent="Margin/Column/Body/Right" unique_id=1740007040]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="ChosenFeatureHost" type="HBoxContainer" parent="Margin/Column/Body/Right/Composition" unique_id=1740007041]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="DropSlot" type="PanelContainer" parent="Margin/Column/Body/Right/Composition" unique_id=1740007042]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 230)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("4_dashed")
+LineColor = Color(0.13725491, 0.12941177, 0.12156863, 0.3)
+LineWidth = 3.0
+DashLength = 12.0
+GapLength = 9.0
+
+[node name="DropLabel" type="Label" parent="Margin/Column/Body/Right/Composition/DropSlot" unique_id=1740007043]
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"Caps"
+text = "DROP
+SLOT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PoolHeaderRow" type="HBoxContainer" parent="Margin/Column/Body/Right" unique_id=1740007044]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="PoolHeader" type="Label" parent="Margin/Column/Body/Right/PoolHeaderRow" unique_id=1740007045]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"HeaderSmall"
+text = "Features"
+
+[node name="Filters" type="HBoxContainer" parent="Margin/Column/Body/Right/PoolHeaderRow" unique_id=1740007029]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = -3
+
+[node name="PoolDivider" type="ColorRect" parent="Margin/Column/Body/Right" unique_id=1740007046]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.4)
+
+[node name="PoolScroll" type="ScrollContainer" parent="Margin/Column/Body/Right" unique_id=1740007034]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="FeatureHost" type="GridContainer" parent="Margin/Column/Body/Right/PoolScroll" unique_id=1740007035]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 4
+
+[node name="FooterDivider" type="ColorRect" parent="Margin/Column" unique_id=1740007036]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 1)
+
+[node name="Footer" type="HBoxContainer" parent="Margin/Column" unique_id=1740007037]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="LeaveButton" type="Button" parent="Margin/Column/Footer" unique_id=1740007038]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Leave"
+
+[node name="InviteButton" type="Button" parent="Margin/Column/Footer" unique_id=1740007039]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Invite Friend"
+
+[node name="Filler" type="Control" parent="Margin/Column/Footer" unique_id=1740007040]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="StartButton" type="Button" parent="Margin/Column/Footer" unique_id=1740007041]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"PrimaryButton"
+text = "Start"

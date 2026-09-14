@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://b5vsmlsy22rqy"]
+
+[ext_resource type="Script" uid="uid://c1osefac4k28j" path="res://UI/Settings/SettingsPage.cs" id="1_page"]
+[ext_resource type="Theme" uid="uid://cd7kxq8mf4v6b" path="res://UI/Theme/BaseTheme.tres" id="2_theme"]
+
+[node name="SettingsPage" type="Control" unique_id=1740004001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_page")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1740004002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 56
+theme_override_constants/margin_right = 96
+theme_override_constants/margin_bottom = 56
+
+[node name="Column" type="VBoxContainer" parent="Margin" unique_id=1740004003]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+
+[node name="Header" type="HBoxContainer" parent="Margin/Column" unique_id=1740004004]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 26
+
+[node name="TitleLabel" type="Label" parent="Margin/Column/Header" unique_id=1740004005]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "Settings"
+
+[node name="Body" type="HBoxContainer" parent="Margin/Column" unique_id=1740004007]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 32
+
+[node name="Rail" type="VBoxContainer" parent="Margin/Column/Body" unique_id=1740004008]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="VideoSlot" type="Control" parent="Margin/Column/Body/Rail" unique_id=1740004200]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VideoButton" type="Button" parent="Margin/Column/Body/Rail/VideoSlot" unique_id=1740004009]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.0087266
+pivot_offset = Vector2(0, 34)
+focus_mode = 0
+theme_type_variation = &"PrimaryButton"
+text = "Video"
+alignment = 0
+
+[node name="AudioSlot" type="Control" parent="Margin/Column/Body/Rail" unique_id=1740004201]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="AudioButton" type="Button" parent="Margin/Column/Body/Rail/AudioSlot" unique_id=1740004010]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.005236
+pivot_offset = Vector2(0, 34)
+focus_mode = 0
+text = "Audio"
+alignment = 0
+
+[node name="ControlsSlot" type="Control" parent="Margin/Column/Body/Rail" unique_id=1740004202]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ControlsButton" type="Button" parent="Margin/Column/Body/Rail/ControlsSlot" unique_id=1740004011]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.005236
+pivot_offset = Vector2(0, 34)
+focus_mode = 0
+text = "Controls"
+alignment = 0
+
+[node name="GameplaySlot" type="Control" parent="Margin/Column/Body/Rail" unique_id=1740004203]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="GameplayButton" type="Button" parent="Margin/Column/Body/Rail/GameplaySlot" unique_id=1740004012]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0087266
+pivot_offset = Vector2(0, 34)
+focus_mode = 0
+text = "Gameplay"
+alignment = 0
+
+[node name="PageHost" type="PanelContainer" parent="Margin/Column/Body" unique_id=1740004014]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+mouse_filter = 2
+theme_type_variation = &"Frame"
+
+[node name="Footer" type="HBoxContainer" parent="Margin/Column" unique_id=1740004063]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="BackButton" type="Button" parent="Margin/Column/Footer" unique_id=1740004064]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Back"
+
+[node name="Filler" type="Control" parent="Margin/Column/Footer" unique_id=1740004065]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="ResetButton" type="Button" parent="Margin/Column/Footer" unique_id=1740004066]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Reset Section"
+
+[node name="ApplyButton" type="Button" parent="Margin/Column/Footer" unique_id=1740004067]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"PrimaryButton"
+text = "Apply"

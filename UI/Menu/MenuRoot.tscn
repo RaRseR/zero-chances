@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c2uokxl8kvpar"]
+
+[ext_resource type="Theme" uid="uid://cd7kxq8mf4v6b" path="res://UI/Theme/BaseTheme.tres" id="1_gwlqs"]
+[ext_resource type="Script" uid="uid://tcb8lpygut6k" path="res://UI/Menu/MenuRoot.cs" id="1_root"]
+[ext_resource type="Texture2D" uid="uid://0bc00ubfdl5n" path="res://Assets/Dev/3.jpg" id="2_backdrop"]
+
+[node name="MenuRoot" type="Control" unique_id=1003145368]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gwlqs")
+script = ExtResource("1_root")
+
+[node name="Backdrop" type="TextureRect" parent="." unique_id=1003145369]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_backdrop")
+stretch_mode = 6
+
+[node name="Veil" type="ColorRect" parent="." unique_id=1003145370]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.937, 0.925, 0.894, 0.9)
+
+[node name="PageHost" type="Control" parent="." unique_id=2111157158]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

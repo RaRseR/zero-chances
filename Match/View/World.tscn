@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cm4xuek4qvrci"]
+
+[ext_resource type="Script" uid="uid://e4bqbgxmjdb1" path="res://Match/View/World.cs" id="1_world"]
+
+[node name="World" type="Node3D" unique_id=860291350]
+script = ExtResource("1_world")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1506945974]
+transform = Transform3D(-0.1539171, 0.69868076, -0.69868076, 0, 0.7071068, 0.7071068, 0.9880838, 0.10883583, -0.10883583, 0, 0, 0)

@@ -1,0 +1,62 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/Settings/Pages/Controls/KeyPrompt/KeyPrompt.cs" id="1_prompt"]
+
+[node name="KeyPrompt" type="Control" unique_id=1740005400]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_prompt")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=1740005401]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.62)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1740005402]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Center" unique_id=1740005403]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+theme_type_variation = &"Frame"
+
+[node name="Column" type="VBoxContainer" parent="Center/Panel" unique_id=1740005404]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="Center/Panel/Column" unique_id=1740005405]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "Press a key"
+horizontal_alignment = 1
+
+[node name="ActionLabel" type="Label" parent="Center/Panel/Column" unique_id=1740005406]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Caps"
+text = "ACTION"
+horizontal_alignment = 1
+
+[node name="HintLabel" type="Label" parent="Center/Panel/Column" unique_id=1740005407]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Muted"
+text = "Escape to cancel"
+horizontal_alignment = 1
+autowrap_mode = 3
