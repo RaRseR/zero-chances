@@ -48,9 +48,7 @@ public static class Planner
 		float centerX = rand.RangeFloat(0.40f, 0.60f);
 		float centerY = rand.RangeFloat(0.40f, 0.60f);
 
-		steps.Add(new RadialStep(
-			1f, 1f, centerX, centerY, centerX, centerY, 0.36f, 0.46f, flatFraction: 0.18f, mode: BlendMode.Max
-		));
+		steps.Add(new RadialStep(0.51f, 0.65f, centerX, centerY, centerX, centerY, 0.36f, 0.46f, flatFraction: 0.18f, mode: BlendMode.Max));
 
 		int satellites = rand.RangeInt(3, 5);
 
@@ -59,10 +57,7 @@ public static class Planner
 			float positionX = Math.Clamp(centerX + rand.RangeFloat(-0.28f, 0.28f), 0.12f, 0.88f);
 			float positionY = Math.Clamp(centerY + rand.RangeFloat(-0.28f, 0.28f), 0.12f, 0.88f);
 
-			steps.Add(new RadialStep(
-				0.55f, 0.85f, positionX, positionY, positionX, positionY, 0.08f, 0.18f,
-				flatFraction: 0.12f, mode: BlendMode.Max
-			));
+			steps.Add(new RadialStep(0.51f, 0.60f, positionX, positionY, positionX, positionY, 0.08f, 0.18f, flatFraction: 0.12f, mode: BlendMode.Max));
 		}
 
 		return steps.ToArray();
